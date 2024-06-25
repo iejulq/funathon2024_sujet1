@@ -58,6 +58,7 @@ Pour récupérer le format de l'URL vous pouvez regarder ces pages de la documen
 
 
 secrets <- yaml::read_yaml("secrets.yaml")
+
 STADIA_MAPS_API_KEY <- secrets$stadiaMaps$API_KEY
 
 STYLE <- "outdoors"

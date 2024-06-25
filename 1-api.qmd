@@ -168,7 +168,7 @@ content <- httr::content(response)
 if (httr::status_code(response) == 200) {
   print("La requête a bien été traitée")
   content <- httr::content(response, as = "parsed")
-  print(content)
+  # print(content)
 } else {
   # Affichage d'un message d'erreur si le code de la réponse n'est pas 200
   print(sprintf("Une erreur est survenue. Code de la réponse : %d", httr::status_code(response)))
@@ -216,6 +216,10 @@ get_travel_time_api_response <- function(api_url, request_body) {
 #| code-summary: Cliquer pour voir la réponse
 #| code-overflow: scroll
 
+
+# ROUTES_API_URL : url de l'API requêtée
+# requête 
+
 response_from_function <- get_travel_time_api_response(ROUTES_API_URL, request_body)
 ```
 
@@ -226,6 +230,8 @@ response_from_function <- get_travel_time_api_response(ROUTES_API_URL, request_b
 #| code-fold: true
 #| code-summary: Cliquer pour voir la réponse
 #| code-overflow: scroll
+
+View(response_from_function)
 
 list_itinerary <- response_from_function[[1]]$results[[1]]$locations[[1]]$properties
 print(list_itinerary)
