@@ -10,6 +10,8 @@ format:
 
 La première partie du sujet consiste à interroger basiquement l'API de routage de TravelTime qui permet obtenir des données de temps de trajet entre deux points définis par leurs coordoonées géographiques.
 
+
+
 Nous allons tout d'abord présenter comment construire une requête pour communiquer avec l'API de [TravelTime](https://account.traveltime.com/) afin de récupérer les données de temps de trajet. Avant cela, il va falloir effectuer plusieurs étapes préliminaires.
 
 ::: callout-note
